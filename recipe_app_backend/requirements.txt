@@ -3,6 +3,9 @@ Django==5.2
 djangorestframework==3.16.0
 drf-yasg==1.21.10
 django-filter==24.2
+django-cors-headers==4.3.1
+# Pin django-cors-headers to latest 4.x that works with Django 5.x; 4.7.0 may not be compatible
+
 flake8==7.2.0
 inflection==0.5.1
 iniconfig==2.1.0
@@ -11,8 +14,8 @@ packaging==24.2
 pluggy==1.5.0
 pycodestyle==2.13.0
 pyflakes==3.3.2
+# pytz is not required for Django 5+, as it uses zoneinfo by default, but included if needed by a legacy dep
 pytz==2025.2
 PyYAML==6.0.2
 sqlparse==0.5.3
 uritemplate==4.1.1
-django-cors-headers==4.7.0
